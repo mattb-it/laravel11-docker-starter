@@ -1,0 +1,6 @@
+FROM serversideup/php:beta-8.3-cli
+
+# TODO: Fix for gosu, remove when this is merged: https://github.com/serversideup/docker-php/pull/287
+RUN docker-php-serversideup-dep-install-debian "gosu"
+
+COPY . /var/www/html
