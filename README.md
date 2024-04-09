@@ -7,11 +7,8 @@ It uses [serversideup](https://serversideup.net/open-source/docker-php/docs) ima
 1. Clone the repository
 2. Add execute permission to the `kickstarter.sh` file by running `chmod +x kickstarter.sh`
 3. Run `./kickstarter.sh <project_name>`, replace `<project_name>` with the name of your project
-4. Run `docker-compose -f docker-compose.local.yml up -d`
-5. Run `docker-compose exec laravel11_webserver composer install`
-6. Run `docker-compose exec laravel11_webserver php artisan key:generate`
-7. Run `docker-compose exec laravel11_webserver php artisan migrate`
-8. Enjoy! 🎉
+4. Run `docker-compose up -d`
+5. Enjoy! 🎉
 
 ## Cleanup (Optional, read carefully)
 You can remove example docker file and kickstarter script by running `./kickstarter_cleanup.sh` script. It simply removes following files:
