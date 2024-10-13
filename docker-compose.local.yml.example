@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: Dockerfile-cli
     container_name: {appname}_task
-    command: ["gosu", "www-data", "/usr/local/bin/php", "artisan", "schedule:work"]
+    command: ["php", "/var/www/html/artisan", "schedule:work"]
     volumes:
       - .:/var/www/html/:cached
     environment:
@@ -32,7 +32,7 @@ services:
       context: .
       dockerfile: Dockerfile-cli
     container_name: {appname}_queue
-    command: ["gosu", "www-data", "/usr/local/bin/php", "artisan", "queue:work"]
+    command: ["php", "/var/www/html/artisan", "queue:work"]
     volumes:
       - .:/var/www/html/:cached
     environment:
