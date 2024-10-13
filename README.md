@@ -7,7 +7,7 @@ It uses [serversideup](https://serversideup.net/open-source/docker-php/docs) ima
 1. Clone the repository: `git clone git@github.com:mattb-it/laravel11-docker-starter.git laravel_project`
 2. Add execute permission to the `kickstarter.sh` file by running `chmod +x kickstarter.sh`
 3. Run `./kickstarter.sh <project_name>`, replace `<project_name>` with the name of your project
-4. Run `docker-compose up -d`
+4. Run `docker-compose -f docker-compose.local.yml up -d`
 5. Enjoy! 🎉
 
 ## Cleanup (Optional, read carefully)
