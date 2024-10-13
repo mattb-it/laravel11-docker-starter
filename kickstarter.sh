@@ -2,6 +2,12 @@
 
 # Usage: ./kickstarter.sh <project_name>
 
+# Check if docker is up and running
+if ! docker info > /dev/null 2>&1; then
+    echo "Cannot connect to the Docker daemon. Is the docker daemon running?"
+    exit 1
+fi
+
 # Check if the user has provided an argument
 if [ -z "$1" ]
   then
