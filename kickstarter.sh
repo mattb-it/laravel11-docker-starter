@@ -17,7 +17,7 @@ fi
 
 # Cleanup working directory by removing all files and directories except files: kickstarter.sh, kickstarter_cleanup.sh, docker-compose.local.yml.example and Dockerfile-cli.
 find . -maxdepth 1 -type f -not -name 'kickstarter.sh' -not -name 'kickstarter_cleanup.sh' -not -name 'docker-compose.local.yml.example' -not -name 'Dockerfile-cli' -exec rm -rf {} \;
-find . -maxdepth 1 -type d -not -name '.' -not -name '.git' -exec rm -rf {} \;
+find . -maxdepth 1 -type d -not -name '.' -exec rm -rf {} \;
 
 # Copy the docker-compose.local.yml.example to docker-compose.local.yml
 cp docker-compose.local.yml.example docker-compose.local.yml
