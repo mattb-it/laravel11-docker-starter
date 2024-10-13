@@ -4,7 +4,7 @@ This is a starter project for Laravel 11 using Docker. It includes a web server 
 It uses [serversideup](https://serversideup.net/open-source/docker-php/docs) images for the web server, queue worker, and scheduler.
 
 ## Installation
-1. Clone the repository
+1. Clone the repository: `git clone git@github.com:mattb-it/laravel11-docker-starter.git laravel_project`
 2. Add execute permission to the `kickstarter.sh` file by running `chmod +x kickstarter.sh`
 3. Run `./kickstarter.sh <project_name>`, replace `<project_name>` with the name of your project
 4. Run `docker-compose up -d`
