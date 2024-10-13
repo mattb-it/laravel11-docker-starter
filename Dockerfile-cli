@@ -1,6 +1,12 @@
-FROM serversideup/php:beta-8.3-cli
+FROM serversideup/php:8.3-cli
 
-# TODO: Fix for gosu, remove when this is merged: https://github.com/serversideup/docker-php/pull/287
-RUN docker-php-serversideup-dep-install-debian "gosu"
+# Switch to root so we can do root things
+USER root
+
+# Install additional extension with root permissions
+RUN install-php-extensions bcmath
 
 COPY . /var/www/html
+
+# Drop back to our unprivileged user
+USER www-data
