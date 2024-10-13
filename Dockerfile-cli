@@ -6,7 +6,5 @@ USER root
 # Install additional extension with root permissions
 RUN install-php-extensions bcmath
 
-COPY . /var/www/html
-
 # Drop back to our unprivileged user
 USER www-data
