@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   app:
-    image: serversideup/php:beta-8.3-fpm-nginx
+    image: serversideup/php:8.3-fpm-nginx
     container_name: {appname}_webserver
     ports:
       - '8888:80'
