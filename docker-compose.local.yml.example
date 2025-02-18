@@ -1,11 +1,11 @@
 version: '3.7'
 services:
   app:
-    image: serversideup/php:8.3-fpm-nginx
+    image: serversideup/php:8.3-fpm-nginx-alpine
     container_name: {appname}_webserver
     ports:
-      - '8888:80'
-      - '444:443'
+      - '8888:8080'
+      - '444:8443'
     volumes:
       - .:/var/www/html/:cached
     extra_hosts:

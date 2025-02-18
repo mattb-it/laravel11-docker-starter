@@ -1,4 +1,4 @@
-FROM serversideup/php:8.3-cli
+FROM serversideup/php:8.3-cli-alpine
 
 # Switch to root so we can do root things
 USER root
